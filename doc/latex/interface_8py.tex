@@ -1,0 +1,31 @@
+\hypertarget{interface_8py}{}\section{scripts/interface.py File Reference}
+\label{interface_8py}\index{scripts/interface.\+py@{scripts/interface.\+py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceinterface}{interface}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceinterface_aca432e6f81aa933df57e2bea65335ee6}{interface.\+current\+\_\+position} (odom\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Read the current position of the robot from odom. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceinterface_ac84656acec70183a4ef276f4a3343971}{interface.\+main} ()
+\begin{DoxyCompactList}\small\item\em Takes command from the user and execute the task requested. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceinterface_a26cef342aa268117ce542f3465fb6ca0}{interface.\+move\+\_\+to} (x\+\_\+target, y\+\_\+target)
+\begin{DoxyCompactList}\small\item\em Publish the target in order to use move\+\_\+base service to reach it. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceinterface_a25416d5ac5c4bc27d42f46875bff174e}{interface.\+reach\+\_\+target} (x\+\_\+target, y\+\_\+target)
+\begin{DoxyCompactList}\small\item\em Keeps the program in sleep until the target isn\textquotesingle{}t reached it also compute and print the distance. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceinterface_a0a4ec201152b53b71d452da030b40784}{interface.\+take\+\_\+position\+\_\+from\+\_\+user} ()
+\begin{DoxyCompactList}\small\item\em Takes one of the possible target from the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceinterface_a13ab2be968e67ac3d7d52e5e25c430c3}{interface.\+current\+\_\+position} = Point()
+\begin{DoxyCompactList}\small\item\em It contains the current robot coordinates. \end{DoxyCompactList}\item 
+\hyperlink{namespaceinterface_a1de259b3c06e4f436bbade32c75c9318}{interface.\+pub\+\_\+goal} = None
+\begin{DoxyCompactList}\small\item\em To publish new goals. \end{DoxyCompactList}\item 
+\hyperlink{namespaceinterface_ac9f12ff0de8248506bf532b6874750e7}{interface.\+sub\+\_\+odom} = None
+\begin{DoxyCompactList}\small\item\em To read the current position. \end{DoxyCompactList}\item 
+\hyperlink{namespaceinterface_a4709d1a9f45323d007767a3b7c4725f5}{interface.\+pub\+\_\+target\+\_\+reached} = None
+\begin{DoxyCompactList}\small\item\em To cancel the target. \end{DoxyCompactList}\end{DoxyCompactItemize}

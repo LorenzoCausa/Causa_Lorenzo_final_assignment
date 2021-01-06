@@ -1,0 +1,57 @@
+BEHAVIOR OF THE PROGRAM:
+ endless loop
+ {
+  Takes commands from the user and execute them.
+ }
+ 
+ POSSIBLE COMMANDS:
+ 1) Reach random target
+ 2) Choose target
+ 3) Follow the wall
+ 4) Stop the robot
+ 
+ Possible targets:
+ (-4,-3);(-4,2);(-4,7);(5,-7);(5,-3);(5,1)
+ 
+ NODES:
+ interface.py  -> It takes command from the user and execute them
+ random_service -> It generates random targets  
+ 
+ LAUNCH FILE
+ causa_assignment.launch -> it will run interface.py, random_service and wall follow service_m.py
+ 
+ HOW TO RUN THE CODE:
+ 
+ 1 Launch the simulation enviroment by executing the command:
+   roslaunch final_assignment simulation_gmapping.launc
+   
+ 2 Launch move_base by executing:
+   roslaunch final_assignment move_base.launch
+  
+ 3 Launch the launch file in "causa_final_assignment package": 
+   roslaunch causa_final_assignment causa_assignment.launch  
+   
+ SERVICES  
+ /random -> server service in random_service node: computes random targets
+ 
+ DOCUMENTATION
+ doxygen documentation and computational graph are in the folder doc 
+ 
+ SOFTWARE ARCHITECTURE:
+ The code is in the package "causa_final_assignment" this package have two nodes:
+ interface.py (written in python) and random_servive (written in cpp).
+ Interface.py is the main program, it takes the commands and provide to execute them,
+ it is subscribed to odom for reading and update periodically the current position of the robot.
+ It publish in 3 topics: cmd_vel for change the velocity (in particular to stop the robot),
+ move_base/goal for publishing the target to reach, move_base/cancel to cancel a target once it is reached.
+ It has 2 client: the first for use the random_service(which provide a random target to reach), the second for
+ the wall_follow_service in the package "final_assignment".
+ 
+ LIMITATION AND POSSIBLE IMPROVEMENTS:
+ The program is able to refuse wrong numerical commands, but if instead a non numerical commands is enter 
+ the nodes interface.py is not able to manage it and it will generates errors, another problem is the fact that 
+ sometimes the map generated has some errors, this can bring the robot to not been able to accomplish its task.
+ Possible solution to the last problem it would be to give the possibilty to the user to make discard the current
+ map so that the robot can make a new one.
+      
+ 

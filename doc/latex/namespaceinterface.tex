@@ -1,0 +1,129 @@
+\hypertarget{namespaceinterface}{}\section{interface Namespace Reference}
+\label{namespaceinterface}\index{interface@{interface}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceinterface_aca432e6f81aa933df57e2bea65335ee6}{current\+\_\+position} (odom\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Read the current position of the robot from odom. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceinterface_ac84656acec70183a4ef276f4a3343971}{main} ()
+\begin{DoxyCompactList}\small\item\em Takes command from the user and execute the task requested. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceinterface_a26cef342aa268117ce542f3465fb6ca0}{move\+\_\+to} (x\+\_\+target, y\+\_\+target)
+\begin{DoxyCompactList}\small\item\em Publish the target in order to use move\+\_\+base service to reach it. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceinterface_a25416d5ac5c4bc27d42f46875bff174e}{reach\+\_\+target} (x\+\_\+target, y\+\_\+target)
+\begin{DoxyCompactList}\small\item\em Keeps the program in sleep until the target isn\textquotesingle{}t reached it also compute and print the distance. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceinterface_a0a4ec201152b53b71d452da030b40784}{take\+\_\+position\+\_\+from\+\_\+user} ()
+\begin{DoxyCompactList}\small\item\em Takes one of the possible target from the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceinterface_a13ab2be968e67ac3d7d52e5e25c430c3}{current\+\_\+position} = Point()
+\begin{DoxyCompactList}\small\item\em It contains the current robot coordinates. \end{DoxyCompactList}\item 
+\hyperlink{namespaceinterface_a1de259b3c06e4f436bbade32c75c9318}{pub\+\_\+goal} = None
+\begin{DoxyCompactList}\small\item\em To publish new goals. \end{DoxyCompactList}\item 
+\hyperlink{namespaceinterface_ac9f12ff0de8248506bf532b6874750e7}{sub\+\_\+odom} = None
+\begin{DoxyCompactList}\small\item\em To read the current position. \end{DoxyCompactList}\item 
+\hyperlink{namespaceinterface_a4709d1a9f45323d007767a3b7c4725f5}{pub\+\_\+target\+\_\+reached} = None
+\begin{DoxyCompactList}\small\item\em To cancel the target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interface@{interface}!current\+\_\+position@{current\+\_\+position}}
+\index{current\+\_\+position@{current\+\_\+position}!interface@{interface}}
+\subsubsection[{\texorpdfstring{current\+\_\+position(odom\+\_\+data)}{current_position(odom_data)}}]{\setlength{\rightskip}{0pt plus 5cm}def interface.\+current\+\_\+position (
+\begin{DoxyParamCaption}
+\item[{}]{odom\+\_\+data}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceinterface_aca432e6f81aa933df57e2bea65335ee6}{}\label{namespaceinterface_aca432e6f81aa933df57e2bea65335ee6}
+
+
+Read the current position of the robot from odom. 
+
+\index{interface@{interface}!main@{main}}
+\index{main@{main}!interface@{interface}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}def interface.\+main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceinterface_ac84656acec70183a4ef276f4a3343971}{}\label{namespaceinterface_ac84656acec70183a4ef276f4a3343971}
+
+
+Takes command from the user and execute the task requested. 
+
+1) Reach random target
+
+2) Choose target
+
+3) Follow the wall
+
+4) Stop the robot
+
+Possible targets\+:
+
+(-\/4,-\/3);(-\/4,2);(-\/4,7);(5,-\/7);(5,-\/3);(5,1) \index{interface@{interface}!move\+\_\+to@{move\+\_\+to}}
+\index{move\+\_\+to@{move\+\_\+to}!interface@{interface}}
+\subsubsection[{\texorpdfstring{move\+\_\+to(x\+\_\+target, y\+\_\+target)}{move_to(x_target, y_target)}}]{\setlength{\rightskip}{0pt plus 5cm}def interface.\+move\+\_\+to (
+\begin{DoxyParamCaption}
+\item[{}]{x\+\_\+target, }
+\item[{}]{y\+\_\+target}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceinterface_a26cef342aa268117ce542f3465fb6ca0}{}\label{namespaceinterface_a26cef342aa268117ce542f3465fb6ca0}
+
+
+Publish the target in order to use move\+\_\+base service to reach it. 
+
+\index{interface@{interface}!reach\+\_\+target@{reach\+\_\+target}}
+\index{reach\+\_\+target@{reach\+\_\+target}!interface@{interface}}
+\subsubsection[{\texorpdfstring{reach\+\_\+target(x\+\_\+target, y\+\_\+target)}{reach_target(x_target, y_target)}}]{\setlength{\rightskip}{0pt plus 5cm}def interface.\+reach\+\_\+target (
+\begin{DoxyParamCaption}
+\item[{}]{x\+\_\+target, }
+\item[{}]{y\+\_\+target}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceinterface_a25416d5ac5c4bc27d42f46875bff174e}{}\label{namespaceinterface_a25416d5ac5c4bc27d42f46875bff174e}
+
+
+Keeps the program in sleep until the target isn\textquotesingle{}t reached it also compute and print the distance. 
+
+\index{interface@{interface}!take\+\_\+position\+\_\+from\+\_\+user@{take\+\_\+position\+\_\+from\+\_\+user}}
+\index{take\+\_\+position\+\_\+from\+\_\+user@{take\+\_\+position\+\_\+from\+\_\+user}!interface@{interface}}
+\subsubsection[{\texorpdfstring{take\+\_\+position\+\_\+from\+\_\+user()}{take_position_from_user()}}]{\setlength{\rightskip}{0pt plus 5cm}def interface.\+take\+\_\+position\+\_\+from\+\_\+user (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceinterface_a0a4ec201152b53b71d452da030b40784}{}\label{namespaceinterface_a0a4ec201152b53b71d452da030b40784}
+
+
+Takes one of the possible target from the user. 
+
+Possible targets\+:
+
+(-\/4,-\/3);(-\/4,2);(-\/4,7);(5,-\/7);(5,-\/3);(5,1) 
+
+\subsection{Variable Documentation}
+\index{interface@{interface}!current\+\_\+position@{current\+\_\+position}}
+\index{current\+\_\+position@{current\+\_\+position}!interface@{interface}}
+\subsubsection[{\texorpdfstring{current\+\_\+position}{current_position}}]{\setlength{\rightskip}{0pt plus 5cm}interface.\+current\+\_\+position = Point()}\hypertarget{namespaceinterface_a13ab2be968e67ac3d7d52e5e25c430c3}{}\label{namespaceinterface_a13ab2be968e67ac3d7d52e5e25c430c3}
+
+
+It contains the current robot coordinates. 
+
+\index{interface@{interface}!pub\+\_\+goal@{pub\+\_\+goal}}
+\index{pub\+\_\+goal@{pub\+\_\+goal}!interface@{interface}}
+\subsubsection[{\texorpdfstring{pub\+\_\+goal}{pub_goal}}]{\setlength{\rightskip}{0pt plus 5cm}interface.\+pub\+\_\+goal = None}\hypertarget{namespaceinterface_a1de259b3c06e4f436bbade32c75c9318}{}\label{namespaceinterface_a1de259b3c06e4f436bbade32c75c9318}
+
+
+To publish new goals. 
+
+\index{interface@{interface}!pub\+\_\+target\+\_\+reached@{pub\+\_\+target\+\_\+reached}}
+\index{pub\+\_\+target\+\_\+reached@{pub\+\_\+target\+\_\+reached}!interface@{interface}}
+\subsubsection[{\texorpdfstring{pub\+\_\+target\+\_\+reached}{pub_target_reached}}]{\setlength{\rightskip}{0pt plus 5cm}interface.\+pub\+\_\+target\+\_\+reached = None}\hypertarget{namespaceinterface_a4709d1a9f45323d007767a3b7c4725f5}{}\label{namespaceinterface_a4709d1a9f45323d007767a3b7c4725f5}
+
+
+To cancel the target. 
+
+\index{interface@{interface}!sub\+\_\+odom@{sub\+\_\+odom}}
+\index{sub\+\_\+odom@{sub\+\_\+odom}!interface@{interface}}
+\subsubsection[{\texorpdfstring{sub\+\_\+odom}{sub_odom}}]{\setlength{\rightskip}{0pt plus 5cm}interface.\+sub\+\_\+odom = None}\hypertarget{namespaceinterface_ac9f12ff0de8248506bf532b6874750e7}{}\label{namespaceinterface_ac9f12ff0de8248506bf532b6874750e7}
+
+
+To read the current position. 
+
