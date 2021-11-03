@@ -1,4 +1,4 @@
-BEHAVIOR OF THE PROGRAM:
+# BEHAVIOR OF THE PROGRAM:
  endless loop
  {
   Takes commands from the user and execute them.
@@ -54,5 +54,5 @@ BEHAVIOR OF THE PROGRAM:
  Possible solution to the last problem it would be to give the possibilty to the user to make discard the current
  map so that the robot can make a new one.
       
-# Documentation
+## Documentation
 [click here](https://lorenzocausa.github.io/Causa_Lorenzo_final_assignment/)
